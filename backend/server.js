@@ -19,7 +19,8 @@ const URL = process.env.MONGO_ATLAS_CONNECTION_STRING;
 mongoose.connect(URL, {
     useNewUrlParser: true, 
     useCreateIndex: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 });
 
 mongoose.connection.once("open", () => {
